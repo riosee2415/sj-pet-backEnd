@@ -175,3 +175,36 @@ type DirectRequest {
   completedAt: String!
   memo: String!
 }
+
+type Store {
+  _id: ID!
+  title: String!
+  address: String!
+  lnt: String! # 경도
+  att: String! # 위도
+  thumbnailPath: String! # 4:3 비율
+  tel: String!
+  workTime: String!
+}
+
+type StoryView {
+  _id: ID!
+  title: String!
+  imagePath: String!
+  contents: String!
+}
+
+type StoreContact {
+  _id: ID!
+  name: String!
+  loc: String!
+  mobile: String!
+  mayPay: Int!
+  email: String!
+  isExistStore: Boolean!
+  description: String!
+  createdAt: String!
+  completedAt: String!
+  isComplete: Boolean!
+  isAgreement: Boolean!
+}
