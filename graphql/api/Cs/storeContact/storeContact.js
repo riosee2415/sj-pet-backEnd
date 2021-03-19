@@ -1,13 +1,13 @@
 import { CURRENT_TIME } from "../../../../utils/commonUtils";
-import DirectRequest from "../../../models/DirectRequest";
+import StoreContact from "../../../models/StoreContact";
 
 export default {
   Query: {
-    getDirectRequest: async (_, args) => {
+    getStoreContact: async (_, args) => {
       const { isComplete } = args;
 
       try {
-        const result = await DirectRequest.find({ isComplete }).sort({
+        const result = await StoreContact.find({ isComplete }).sort({
           createdAt: 1,
         });
 
@@ -20,13 +20,13 @@ export default {
   },
 
   Mutation: {
-    modifyDirectRequestComplete: async (_, args) => {
+    modifyStoreContactComplete: async (_, args) => {
       const { id, memo } = args;
 
       try {
         const current = await CURRENT_TIME();
 
-        const result = await DirectRequest.updateOne(
+        const result = await StoreContact.updateOne(
           { _id: id },
           {
             memo,
@@ -41,17 +41,31 @@ export default {
         return false;
       }
     },
-    createDirectRequest: async (_, args) => {
-      const { name, mobile, email, description } = args;
+    createStoreContact: async (_, args) => {
+      const {
+        name,
+        loc,
+        mobile,
+        mayPay,
+        email,
+        isExistStore,
+        description,
+        isAgreement,
+      } = args;
 
       try {
         const createdAt = await CURRENT_TIME();
-        const result = await DirectRequest.create({
+        const result = await StoreContact.create({
           name,
+          loc,
           mobile,
+          mayPay,
           email,
+          isExistStore,
           description,
+          isAgreement,
           createdAt,
+          completedAt: "-",
         });
 
         return true;

@@ -1,0 +1,23 @@
+type Query {
+  getStoreContact(isComplete: Boolean!): [StoreContact!]!
+}
+
+type Mutation {
+  createStoreContact(
+    name: String!
+    loc: String!
+    mobile: String!
+    mayPay: String!
+    email: String!
+    isExistStore: Boolean!
+    description: String!
+    isAgreement: Boolean!
+  ): Boolean!
+  modifyStoreContactComplete(id: String!, memo: String!): Boolean!
+  storeContactByScreen(
+    name: String!
+    email: String!
+    mobile: String!
+    description: String!
+  ): Boolean!
+}

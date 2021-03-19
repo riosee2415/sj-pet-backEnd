@@ -1,0 +1,19 @@
+type Query {
+  getStoryView(limit: Int!, currentPage: Int!): [StoryView!]!
+  getStoryViewList: [StoryView!]!
+}
+type Mutation {
+  createStoryView(
+    thumbnail: String!
+    title: String!
+    content: String!
+  ): Boolean!
+  deleteStoryView(id: String!): Boolean!
+  modifyStoryView(id: String!, content: String!): Boolean!
+  modifyStoryViewBasic(
+    id: String!
+    title: String!
+    thumbnail: String!
+  ): Boolean!
+  deleteStoryView(id: String!): Boolean!
+}
