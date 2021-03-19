@@ -1,4 +1,5 @@
 type Query {
   getAllStore: [Store]!
   getStoreOne(id: String!): Store!
+  getStoreTotalPageClient(limit: Int!): Int!
 }

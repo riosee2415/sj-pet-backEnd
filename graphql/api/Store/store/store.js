@@ -14,6 +14,7 @@ export default {
         return {};
       }
     },
+
     getAllStore: async (_, args) => {
       try {
         const result = await Store.find().sort({ title: 1 });
@@ -22,6 +23,23 @@ export default {
       } catch (e) {
         console.log(e);
         return [];
+      }
+    },
+
+    getStoreTotalPageClient: async (_, args) => {
+      const { limit } = args;
+
+      try {
+        const result = await Store.find();
+
+        const cnt = result.length;
+
+        const realTotalPage = cnt % limit > 0 ? cnt / limit + 1 : cnt / limit;
+
+        return parseInt(realTotalPage);
+      } catch (e) {
+        console.log(e);
+        return 0;
       }
     },
   },
