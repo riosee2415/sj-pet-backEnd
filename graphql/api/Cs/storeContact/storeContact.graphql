@@ -1,9 +1,9 @@
 type Query {
-  getDirectRequest(isComplete: Boolean!): [DirectRequest!]!
+  getStoreContact(isComplete: Boolean!): [StoreContact!]!
 }
 
 type Mutation {
-  createDirectRequest(
+  createStoreContact(
     name: String!
     loc: String!
     mobile: String!
@@ -13,8 +13,8 @@ type Mutation {
     description: String!
     isAgreement: Boolean!
   ): Boolean!
-  modifyDirectRequestComplete(id: String!, memo: String!): Boolean!
-  directRequestByScreen(
+  modifyStoreContactComplete(id: String!, memo: String!): Boolean!
+  storeContactByScreen(
     name: String!
     email: String!
     mobile: String!
