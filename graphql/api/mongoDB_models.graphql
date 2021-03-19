@@ -190,8 +190,9 @@ type Store {
 type StoryView {
   _id: ID!
   title: String!
-  imagePath: String!
-  contents: String!
+  content: String!
+  isDelete: Boolean!
+  thumbnail: String!
 }
 
 type StoreContact {
