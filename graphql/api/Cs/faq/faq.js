@@ -41,12 +41,11 @@ export default {
     // },
 
     getFaqDetail: async (_, args) => {
-      const { typeName, searchValue, limit, currentPage } = args;
+      const { searchValue, limit, currentPage } = args;
 
       try {
         const result = await Faq.find({
           question: { $regex: `.*${searchValue}.*` },
-          type: typeName,
         })
           .sort({ type: 1, sort: -1 })
           .limit(limit)
@@ -60,12 +59,11 @@ export default {
     },
 
     getFaqTotalPage: async (_, args) => {
-      const { typeName, searchValue, limit } = args;
+      const { searchValue, limit } = args;
 
       try {
         const result = await Faq.find({
           question: { $regex: `.*${searchValue}.*` },
-          type: typeName,
         }).sort({
           createdAt: -1,
         });

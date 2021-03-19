@@ -9,7 +9,7 @@ type Mutation {
     mobile: String!
     mayPay: String!
     email: String!
-    isExistStore: String!
+    isExistStore: Boolean!
     description: String!
     isAgreement: Boolean!
   ): Boolean!

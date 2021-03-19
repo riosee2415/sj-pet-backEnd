@@ -57,10 +57,15 @@ export default {
         const createdAt = await CURRENT_TIME();
         const result = await StoreContact.create({
           name,
+          loc,
           mobile,
+          mayPay,
           email,
+          isExistStore,
           description,
+          isAgreement,
           createdAt,
+          completedAt: "-",
         });
 
         return true;

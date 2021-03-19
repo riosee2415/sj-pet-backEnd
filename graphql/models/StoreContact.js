@@ -41,6 +41,7 @@ const StoreContact = new Schema(
     completedAt: {
       type: String,
       required: true,
+      required: "-",
     },
     isComplete: {
       type: Boolean,
