@@ -42,7 +42,16 @@ export default {
       }
     },
     createDirectRequest: async (_, args) => {
-      const { name, mobile, email, description } = args;
+      const {
+        name,
+        loc,
+        mobile,
+        mayPay,
+        email,
+        isExistStore,
+        description,
+        isAgreement,
+      } = args;
 
       try {
         const createdAt = await CURRENT_TIME();
