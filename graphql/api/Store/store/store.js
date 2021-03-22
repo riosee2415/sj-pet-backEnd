@@ -45,6 +45,27 @@ export default {
   },
 
   Mutation: {
+    createStoreOne: async (_, args) => {
+      const { title, address, lnt, att, thumbnailPath, tel, workTime } = args;
+
+      try {
+        const result = await Store.create({
+          title,
+          address,
+          lnt,
+          att,
+          thumbnailPath,
+          tel,
+          workTime,
+        });
+
+        return true;
+      } catch (e) {
+        console.log(e);
+        return false;
+      }
+    },
+
     updateStoreOne: async (_, args) => {
       const {
         id,

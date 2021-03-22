@@ -17,4 +17,13 @@ type Mutation {
   ): Boolean!
 
   deleteStoreOne(id: String!): Boolean!
+  createStoreOne(
+    title: String!
+    address: String!
+    lnt: String!
+    att: String!
+    thumbnailPath: String!
+    tel: String!
+    workTime: String!
+  ): Boolean!
 }
