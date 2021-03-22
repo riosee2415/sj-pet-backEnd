@@ -43,4 +43,54 @@ export default {
       }
     },
   },
+
+  Mutation: {
+    updateStoreOne: async (_, args) => {
+      const {
+        id,
+        title,
+        address,
+        lnt,
+        att,
+        thumbnailPath,
+        tel,
+        workTime,
+      } = args;
+
+      try {
+        const result = await Store.updateOne(
+          { _id: id },
+          {
+            $set: {
+              title,
+              address,
+              lnt,
+              att,
+              thumbnailPath,
+              tel,
+              workTime,
+            },
+          }
+        );
+
+        return true;
+      } catch (e) {
+        console.log(e);
+        return false;
+      }
+    },
+
+    deleteStoreOne: async (_, args) => {
+      const { id } = args;
+
+      try {
+        const result = await Store.deleteOne({ _id: id });
+
+        return true;
+      } catch (e) {
+        console.log(e);
+        return false;
+      }
+    },
+  },
 };

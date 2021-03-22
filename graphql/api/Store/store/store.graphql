@@ -3,3 +3,18 @@ type Query {
   getStoreOne(id: String!): Store!
   getStoreTotalPageClient(limit: Int!): Int!
 }
+
+type Mutation {
+  updateStoreOne(
+    id: String!
+    title: String!
+    address: String!
+    lnt: String!
+    att: String!
+    thumbnailPath: String!
+    tel: String!
+    workTime: String!
+  ): Boolean!
+
+  deleteStoreOne(id: String!): Boolean!
+}
