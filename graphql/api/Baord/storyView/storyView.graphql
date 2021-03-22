@@ -1,6 +1,7 @@
 type Query {
   getStoryView(limit: Int!, currentPage: Int!): [StoryView!]!
   getStoryViewList: [StoryView!]!
+  getAllStoryViewList: [StoryView!]!
 }
 type Mutation {
   createStoryView(

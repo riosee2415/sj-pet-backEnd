@@ -28,6 +28,17 @@ export default {
         return [];
       }
     },
+
+    getAllStoryViewList: async (_, args) => {
+      try {
+        const result = await StoryView.find();
+
+        return result;
+      } catch (e) {
+        console.log(e);
+        return [];
+      }
+    },
   },
 
   Mutation: {
