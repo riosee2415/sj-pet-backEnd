@@ -30,6 +30,17 @@ export default {
       }
     },
 
+    getTotalStore: async (_, args) => {
+      try {
+        const result = await Store.find().sort({ title: 1 });
+
+        return result;
+      } catch (e) {
+        console.log(e);
+        return [];
+      }
+    },
+
     getStoreTotalPageClient: async (_, args) => {
       const { limit } = args;
 
