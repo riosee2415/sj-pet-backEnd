@@ -185,6 +185,7 @@ type Store {
   thumbnailPath: String! # 4:3 비율
   tel: String!
   workTime: String!
+  isImportant: Boolean!
 }
 
 type StoryView {

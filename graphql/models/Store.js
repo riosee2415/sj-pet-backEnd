@@ -32,6 +32,11 @@ const Store = new Schema(
       type: String,
       required: true,
     },
+    isImportant: {
+      type: Boolean,
+      required: true,
+      default: false,
+    },
   },
   {
     versionKey: false,

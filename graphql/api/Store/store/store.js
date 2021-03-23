@@ -26,6 +26,19 @@ export default {
       }
     },
 
+    getAllStoreByImportant: async (_, args) => {
+      try {
+        const result = await Store.find({ isImportant: true }).sort({
+          title: 1,
+        });
+
+        return result;
+      } catch (e) {
+        console.log(e);
+        return [];
+      }
+    },
+
     getStoreTotalPageClient: async (_, args) => {
       const { limit } = args;
 
