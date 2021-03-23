@@ -16,6 +16,21 @@ export default {
     },
 
     getAllStore: async (_, args) => {
+      const { limit, currentPage } = args;
+      try {
+        const result = await Store.find()
+          .limit(limit)
+          .skip(currentPage * limit)
+          .sort({ title: 1 });
+
+        return result;
+      } catch (e) {
+        console.log(e);
+        return [];
+      }
+    },
+
+    getTotalStore: async (_, args) => {
       try {
         const result = await Store.find().sort({ title: 1 });
 
