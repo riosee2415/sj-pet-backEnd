@@ -1,0 +1,11 @@
+type Query {
+  getBrand(limit: Int!, currentPage: Int!): [Brand!]!
+  getBrandList: [Brand!]!
+  getAllBrandList: [Brand!]!
+}
+type Mutation {
+  createBrand(thumbnail: String!, title: String!): Boolean!
+  deleteBrand(id: String!): Boolean!
+  modifyBrandBasic(id: String!, title: String!, thumbnail: String!): Boolean!
+  deleteBrand(id: String!): Boolean!
+}

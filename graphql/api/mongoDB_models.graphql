@@ -210,3 +210,11 @@ type StoreContact {
   isComplete: Boolean!
   isAgreement: Boolean!
 }
+
+type Brand {
+  _id: ID!
+  title: String!
+  content: String!
+  isDelete: Boolean!
+  thumbnail: String!
+}
