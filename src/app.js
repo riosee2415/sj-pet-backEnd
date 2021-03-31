@@ -60,6 +60,6 @@ if (!-e $request_filename){
 
 app.listen(app.get(`port`), () => {
   console.log(
-    ` - 🍀 [DEV SAMPLE] GRAPHQL BACKEND SERVER START WITH MONGODB  PORT : ${process.env.PORT} 🍀 `
+    ` - 🍀 [SJPET] GRAPHQL BACKEND SERVER START WITH MONGODB  PORT : ${process.env.PORT} 🍀 `
   );
 });
