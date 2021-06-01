@@ -126,7 +126,16 @@ type NoticeBoard {
   _id: ID!
   type: String!
   title: String!
+  client: String!
+  tel: String!
   description: String!
+  hit: Int!
+  fileOriginName1: String!
+  filePath1: String!
+  fileOriginName2: String!
+  filePath2: String!
+  fileOriginName3: String!
+  filePath3: String!
   createdAt: String!
   isDelete: Boolean!
   deletedAt: String!

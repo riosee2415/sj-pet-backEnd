@@ -28,8 +28,16 @@ type Mutation {
   deleteNoticeBoard(id: String!): Boolean!
   createNoticeBoard(
     title: String!
+    client: String!
+    tel: String!
     type: String!
     description: String!
+    filePath1: String!
+    fileOriginName1: String!
+    filePath2: String!
+    fileOriginName2: String!
+    filePath3: String!
+    fileOriginName3: String!
   ): Boolean!
   modifyNoticeBoard(id: String!, title: String!, description: String!): Boolean!
 }

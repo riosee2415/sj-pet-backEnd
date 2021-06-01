@@ -243,15 +243,36 @@ export default {
     },
 
     createNoticeBoard: async (_, args) => {
-      const { title, type, description } = args;
+      const {
+        title,
+        client,
+        tel,
+        type,
+        description,
+        filePath1,
+        fileOriginName1,
+        filePath2,
+        fileOriginName2,
+        filePath3,
+        fileOriginName3,
+      } = args;
 
       try {
         const current = await CURRENT_TIME();
 
         const result = await NoticeBoard.create({
           title,
+          client,
+          tel,
           type,
           description,
+          hit: 0,
+          filePath1,
+          fileOriginName1,
+          filePath2,
+          fileOriginName2,
+          filePath3,
+          fileOriginName3,
           isDelete: false,
           deletedAt: "",
           createdAt: current,

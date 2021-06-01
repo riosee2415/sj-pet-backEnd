@@ -12,7 +12,44 @@ const NoticeBoard = new Schema(
       type: String,
       required: true,
     },
+    client: {
+      type: String,
+      required: true,
+    },
+    tel: {
+      type: String,
+      required: true,
+    },
     description: {
+      type: String,
+      required: true,
+    },
+    hit: {
+      type: Number,
+      required: true,
+      default: 0,
+    },
+    fileOriginName1: {
+      type: String,
+      required: true,
+    },
+    filePath1: {
+      type: String,
+      required: true,
+    },
+    fileOriginName2: {
+      type: String,
+      required: true,
+    },
+    filePath2: {
+      type: String,
+      required: true,
+    },
+    fileOriginName3: {
+      type: String,
+      required: true,
+    },
+    filePath3: {
       type: String,
       required: true,
     },
