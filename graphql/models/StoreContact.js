@@ -11,6 +11,7 @@ const StoreContact = new Schema(
     loc: {
       type: String,
       required: true,
+      default: "-",
     },
     mobile: {
       type: String,
@@ -24,6 +25,7 @@ const StoreContact = new Schema(
     email: {
       type: String,
       required: true,
+      default: "-",
     },
     isExistStore: {
       type: Boolean,
@@ -33,6 +35,7 @@ const StoreContact = new Schema(
     description: {
       type: String,
       required: true,
+      default: "-",
     },
     createdAt: {
       type: String,
@@ -41,7 +44,7 @@ const StoreContact = new Schema(
     completedAt: {
       type: String,
       required: true,
-      required: "-",
+      default: "-",
     },
     isComplete: {
       type: Boolean,

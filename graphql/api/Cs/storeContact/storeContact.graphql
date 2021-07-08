@@ -20,4 +20,5 @@ type Mutation {
     mobile: String!
     description: String!
   ): Boolean!
+  createNavStoreContact(name: String!, mobile: String!): Boolean!
 }
