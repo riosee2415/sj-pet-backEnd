@@ -79,8 +79,6 @@ export default {
           .limit(limit)
           .skip(currentPage * limit);
 
-        console.log(result);
-
         return result;
       } catch (e) {
         console.log(e);
