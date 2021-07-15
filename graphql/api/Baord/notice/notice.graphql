@@ -40,4 +40,5 @@ type Mutation {
     fileOriginName3: String!
   ): Boolean!
   modifyNoticeBoard(id: String!, title: String!, description: String!): Boolean!
+  createNavNoticeBoard(client: String!, tel: String!): Boolean!
 }

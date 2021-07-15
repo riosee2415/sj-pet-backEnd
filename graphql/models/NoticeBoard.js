@@ -7,10 +7,12 @@ const NoticeBoard = new Schema(
     type: {
       type: String,
       required: true,
+      default: "-",
     },
     title: {
       type: String,
       required: true,
+      default: "안녕하세요",
     },
     client: {
       type: String,
@@ -23,6 +25,7 @@ const NoticeBoard = new Schema(
     description: {
       type: String,
       required: true,
+      default: "-",
     },
     hit: {
       type: Number,
@@ -32,26 +35,32 @@ const NoticeBoard = new Schema(
     fileOriginName1: {
       type: String,
       required: true,
+      default: "-",
     },
     filePath1: {
       type: String,
       required: true,
+      default: "-",
     },
     fileOriginName2: {
       type: String,
       required: true,
+      default: "-",
     },
     filePath2: {
       type: String,
       required: true,
+      default: "-",
     },
     fileOriginName3: {
       type: String,
       required: true,
+      default: "-",
     },
     filePath3: {
       type: String,
       required: true,
+      default: "-",
     },
     createdAt: {
       type: String,
@@ -64,6 +73,7 @@ const NoticeBoard = new Schema(
     },
     deletedAt: {
       type: String,
+      default: "-",
     },
   },
   {

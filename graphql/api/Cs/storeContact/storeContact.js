@@ -74,24 +74,5 @@ export default {
         return false;
       }
     },
-
-    createNavStoreContact: async (_, args) => {
-      const { name, mobile } = args;
-
-      try {
-        const createdAt = await CURRENT_TIME();
-
-        const result = await StoreContact.create({
-          name,
-          mobile,
-          createdAt,
-        });
-
-        return true;
-      } catch (e) {
-        console.log(e);
-        return false;
-      }
-    },
   },
 };

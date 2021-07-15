@@ -301,5 +301,24 @@ export default {
         return false;
       }
     },
+
+    createNavNoticeBoard: async (_, args) => {
+      const { client, tel } = args;
+
+      try {
+        const createdAt = await CURRENT_TIME();
+
+        const result = await NoticeBoard.create({
+          client,
+          tel,
+          createdAt,
+        });
+
+        return true;
+      } catch (e) {
+        console.log(e);
+        return false;
+      }
+    },
   },
 };
