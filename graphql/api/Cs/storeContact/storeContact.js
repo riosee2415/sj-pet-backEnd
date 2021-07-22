@@ -21,7 +21,7 @@ export default {
 
   Mutation: {
     modifyStoreContactComplete: async (_, args) => {
-      const { id, memo } = args;
+      const { id } = args;
 
       try {
         const current = await CURRENT_TIME();
@@ -29,7 +29,6 @@ export default {
         const result = await StoreContact.updateOne(
           { _id: id },
           {
-            memo,
             isComplete: true,
             completedAt: current,
           }
