@@ -1,0 +1,4 @@
+type Query {
+  getNewStoreAdmin: [NewStore]!
+  getNewStoreAdminOne(id: String!): NewStore!
+}

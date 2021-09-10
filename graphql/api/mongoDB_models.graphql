@@ -220,6 +220,12 @@ type StoreContact {
   isAgreement: Boolean!
 }
 
+type NewStore {
+  _id: ID!
+  title: String!
+  thumbnailPath: String! # 4:3 비율
+}
+
 type Brand {
   _id: ID!
   title: String!
