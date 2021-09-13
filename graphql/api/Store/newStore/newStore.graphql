@@ -2,3 +2,11 @@ type Query {
   getNewStoreAdmin: [NewStore]!
   getNewStoreAdminOne(id: String!): NewStore!
 }
+
+type Mutation {
+  updateNewStoreOne(
+    id: String!
+    title: String!
+    thumbnailPath: String!
+  ): Boolean!
+}

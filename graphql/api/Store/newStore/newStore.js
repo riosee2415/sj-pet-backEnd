@@ -17,12 +17,35 @@ export default {
       const { id } = args;
 
       try {
-        const result = await Store.findOne({ _id: id });
+        const result = await NewStore.findOne({ _id: id });
 
         return result;
       } catch (e) {
         console.log(e);
         return {};
+      }
+    },
+  },
+
+  Mutation: {
+    updateNewStoreOne: async (_, args) => {
+      const { id, title, thumbnailPath } = args;
+
+      try {
+        const result = await NewStore.updateOne(
+          { _id: id },
+          {
+            $set: {
+              title,
+              thumbnailPath,
+            },
+          }
+        );
+
+        return true;
+      } catch (e) {
+        console.log(e);
+        return false;
       }
     },
   },
