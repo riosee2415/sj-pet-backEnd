@@ -25,6 +25,17 @@ export default {
         return {};
       }
     },
+
+    getAllNewStore: async (_, args) => {
+      try {
+        const result = await NewStore.find();
+
+        return result;
+      } catch (error) {
+        console.log(error);
+        return [];
+      }
+    },
   },
 
   Mutation: {

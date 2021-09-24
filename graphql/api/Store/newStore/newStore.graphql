@@ -1,6 +1,7 @@
 type Query {
   getNewStoreAdmin: [NewStore]!
   getNewStoreAdminOne(id: String!): NewStore!
+  getAllNewStore: [NewStore]!
 }
 
 type Mutation {
